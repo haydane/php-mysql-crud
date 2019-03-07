@@ -36,11 +36,7 @@
 
       <?php 
         $res = mysqli_query($con,"SELECT * FROM users order by id desc");
-        if($res->num_rows>0){
-        }
-        else{
-          echo "no result";
-        }
+        if($res->num_rows>0):
       ?>
 
 
@@ -72,6 +68,8 @@
           </tbody>
         </table>
       </div>
+
+        <?php endif; ?>
       <br>
 
       <form action="./controller/process.php" method="POST">
